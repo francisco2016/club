@@ -4,7 +4,7 @@ public class Club
     // para guardar elementos de la colección socios.
     private ArrayList<Membership> socios;
     //para guardar el nº de socios.
-    public int contador;
+     
     /**
      * Constructor for objects of class Club
      */
@@ -21,7 +21,7 @@ public class Club
     public void join(Membership member)
     {
         socios.add(member);
-        contador ++;
+     
     }
 
     /**
@@ -30,6 +30,6 @@ public class Club
      */
     public int numberOfMembers(){
         
-        return contador;
+        return socios.size();
     }
 }
