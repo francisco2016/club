@@ -1,20 +1,17 @@
-/**
- * Store details of club memberships.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import java.util.ArrayList;
 public class Club
 {
-    // Define any necessary fields here ...
-    
+    // para guardar elementos de la colección socios.
+    private ArrayList<Membership> socios;
+    //para guardar el nº de socios.
+    public int contador;
     /**
      * Constructor for objects of class Club
      */
     public Club()
     {
-        // Initialise any fields here ...
-        
+       socios = new ArrayList<Membership>();
+
     }
 
     /**
@@ -23,14 +20,16 @@ public class Club
      */
     public void join(Membership member)
     {
+        socios.add(member);
+        contador ++;
     }
 
     /**
      * @return The number of members (Membership objects) in
      *         the club.
      */
-    public int numberOfMembers()
-    {
-        return 0;
+    public int numberOfMembers(){
+        
+        return contador;
     }
 }
